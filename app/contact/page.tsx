@@ -1,0 +1,5 @@
+import type {Metadata} from 'next';
+import {Suspense} from 'react';
+import {ContactForm} from '@/components/ContactForm';
+export const metadata:Metadata={title:'Contact'};
+export default function Contact(){return <><section className="inner-hero dark-section gold-swoop"><div className="container"><div className="eyebrow">Get in touch</div><h1>Let’s begin with<br/><em>a conversation.</em></h1><p>Tell us what you are working toward. We will help identify a thoughtful starting point.</p></div></section><section className="inner-section light-section"><div className="container contact-layout"><div><div className="eyebrow">Contact details</div><h2 className="section-title">Reach out<br/><em>directly.</em></h2><div className="contact-links"><a href="mailto:drvidya@tercelae.com">drvidya@tercelae.com ↗</a><a href="tel:+971527774163">+971 52 777 4163 ↗</a><span>Dubai, United Arab Emirates</span></div></div><Suspense fallback={<div>Loading contact form…</div>}><ContactForm/></Suspense></div></section></>}
